@@ -17,7 +17,8 @@
 
 set -e
 
-DIST=$(lsb_release --codename --short)
+# If DIST isn't already set up, default to the host system's distribution.
+[ -z "$DIST" ] && DIST=$(lsb_release --codename --short)
 
 # Define list of repositories in dependency order.
 # 
@@ -35,6 +36,7 @@ repos=( opx-logging
 	opx-nas-linux
 	opx-nas-ndi-api
 	opx-nas-ndi
+	opx-nas-ndi-x870
 	opx-nas-acl
 	opx-nas-interface
 	opx-nas-l2
