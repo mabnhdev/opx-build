@@ -8,4 +8,5 @@ MIRRORSITE=http://httpredir.debian.org/debian
 HOOKDIR=/var/cache/pbuilder/hook.d
 OTHERMIRROR="deb [trusted=yes] file:///var/cache/pbuilder/result ./|deb [trusted=yes] http://bldecos-1.extremenetworks.com/apt/opx ecos main contrib non-free"
 BINDMOUNTS=/var/cache/pbuilder/result
-EXTRAPACKAGES="apt-utils"
+# preinstall most of the packages that the build needs in order to speed it up
+EXTRAPACKAGES="apt-utils dh-autoreconf debhelper libxml2-dev python-dev exuberant-ctags fakeroot dh-systemd dh-python libhiredis-dev libsystemd-dev"
