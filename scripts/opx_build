@@ -16,6 +16,7 @@
 #
 
 set -e
+set +x
 
 # If DIST isn't already set up, default to the host system's distribution.
 [ -z "$DIST" ] && DIST=$(lsb_release --codename --short)
@@ -63,12 +64,6 @@ trap "rm -rf ${GIT_PBUILDER_OUTPUT_DIR}" EXIT
 
 for r in ${repos[*]}; do
     if [ ! -d $r ]; then
-	    continue
-    fi
-    # Only try and build the opx-nas-ndi-x870 if the Broadcom SAI is available. It will not build for the VM
-    # because there is no Broadcom SAI. Using DIST as the test is a bad kludge. Invent a more maintainable way
-    # when additional platforms are added.
-    if [ "$r" == "opx-nas-ndi-x870" ] && [ "$DIST" != "jessie" ]; then
 	    continue
     fi
     (
