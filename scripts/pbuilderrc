@@ -9,4 +9,4 @@ HOOKDIR=/var/cache/pbuilder/hook.d
 OTHERMIRROR="deb [trusted=yes] file:///var/cache/pbuilder/result ./|deb [trusted=yes] http://bldecos-1.extremenetworks.com/apt/opx ecos main contrib non-free"
 BINDMOUNTS=/var/cache/pbuilder/result
 # preinstall most of the packages that the build needs in order to speed it up
-EXTRAPACKAGES="apt-utils dh-autoreconf debhelper libxml2-dev python-dev exuberant-ctags fakeroot dh-systemd dh-python libhiredis-dev libsystemd-dev"
+EXTRAPACKAGES="apt-utils dh-autoreconf debhelper autotools-dev libxml2-dev python-dev exuberant-ctags fakeroot dh-systemd dh-python libhiredis-dev libsystemd-dev"
