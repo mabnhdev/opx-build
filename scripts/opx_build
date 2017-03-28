@@ -37,7 +37,7 @@ repos=( opx-logging
 	opx-nas-linux
 	opx-nas-ndi-api
 	opx-nas-ndi
-        opx-nas-ndi-x870
+        opx-nas-ndi-using-broadcom
 	opx-nas-acl
 	opx-nas-interface
 	opx-nas-l2
